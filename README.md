@@ -1,86 +1,162 @@
 # UPL Tutorial Management System
 
-## Project Overview
+A Spring Boot based backend application for managing online tutorials, courses, instructors, students, enrollments, and learning progress with secure JWT authentication and role-based authorization.
 
-UPL Tutorial Management System is an online learning platform developed using Spring Boot.
-The system manages users, instructors, courses, tutorials, student enrollment and learning progress.
+## 🚀 Features
 
-The application provides role-based access for Admin, Instructor and Student users.
+### Authentication & Security
+- JWT based authentication
+- Role-based authorization
+- Secure API endpoints
+- ADMIN, INSTRUCTOR, and STUDENT roles
 
+### Admin Module
+- Approve/reject instructor registrations
+- Manage courses
+- Delete courses
+- Manage system users
 
-## Technologies Used
+### Instructor Module
+- Register as instructor
+- Create courses
+- Create tutorials
+- Manage tutorial content
+
+### Student Module
+- View available courses
+- Enroll in courses
+- Complete tutorials
+- Track learning progress
+- View course completion percentage
+
+## 🛠️ Technologies Used
 
 ### Backend
-
 - Java 21
-- Spring Boot 4
+- Spring Boot
 - Spring Security
 - JWT Authentication
-- Hibernate JPA
-- REST API
-
+- Spring Data JPA
+- Hibernate
 
 ### Database
+- MySQL
 
-- MySQL 8
-
-
-### Development Tools
-
+### Tools
 - IntelliJ IDEA
-- MySQL Workbench
 - Postman
+- MySQL Workbench
 - Git & GitHub
 
+## 🏗️ Project Architecture
 
+```
+Controller Layer
+        |
+        ↓
+Service Layer
+        |
+        ↓
+Repository Layer
+        |
+        ↓
+MySQL Database
+```
 
-# Features
+## 📂 Project Modules
 
+```
+upl-tutorial-backend
 
-## Admin Module
+├── authentication
+├── user management
+├── instructor management
+├── course management
+├── tutorial management
+├── enrollment management
+└── student progress tracking
+```
 
-- User management
-- Instructor approval/rejection
-- Course management
-- Tutorial management
-- Access control using roles
+## 🔐 Security Flow
 
+```
+User Login
+     |
+     ↓
+JWT Token Generation
+     |
+     ↓
+JWT Filter Validation
+     |
+     ↓
+Role Authorization
+     |
+     ↓
+Protected API Access
+```
 
+## 🗄️ Database Tables
 
-## Instructor Module
+- user_master
+- course_master
+- tutorial_master
+- instructor_approval_log
+- course_edit_history
+- tutorial_edit_history
+- student_course_enrollment
+- student_progress
 
-- Instructor registration
-- Instructor dashboard
-- Create courses
-- Update courses
-- Add tutorials
-- Manage learning content
+## ▶️ How to Run the Project
 
+### Clone Repository
 
+```
+git clone https://github.com/Sandeep-GV/upl-tutorial-backend.git
+```
 
-## Student Module
+### Configure Database
 
-- Student login
-- View available courses
-- Enroll courses
-- View course tutorials
-- Mark tutorials as completed
-- Track learning progress
-- Student dashboard
-- Completed course history
+Update:
 
+```
+application.properties
+```
 
+with your MySQL configuration.
 
-# Security Implementation
+### Run Application
 
-The project uses JWT based authentication.
+Using Maven:
 
-Implemented security features:
+```
+mvn spring-boot:run
+```
 
-- User authentication
-- JWT token generation
-- JWT request validation
-- Role Based Authorization
+Application runs on:
 
+```
+http://localhost:8080
+```
 
-Available Roles:
+## 📌 API Testing
+
+API testing was performed using:
+
+- Postman
+
+Implemented APIs:
+
+- Authentication APIs
+- Course APIs
+- Tutorial APIs
+- Enrollment APIs
+- Student Dashboard APIs
+
+## 👨‍💻 Author
+
+Sandeep G V
+
+Information Science and Engineering Student
+
+GitHub:
+https://github.com/Sandeep-GV
